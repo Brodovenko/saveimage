@@ -6,10 +6,9 @@
  * Time: 11:33
  */
 
-namespace brodovenko\saveimage\src;
+use PHPUnit\Framework\TestCase;
 
-
-class ImageValidatorTest extends \PHPUnit_Framework_TestCase
+class ImageValidatorTest extends TestCase
 {
 
     public function testValidate()
@@ -18,9 +17,9 @@ class ImageValidatorTest extends \PHPUnit_Framework_TestCase
 
         $params = [ 'width' => 1000, 'height' => 900, 'type' => ['image/gif', 'image/jpeg', 'image/png'] ];
 
-        $imageDownloader = new ImageDownloader($imageUrl);
-        $imageValidator = new ImageValidator($imageDownloader->download());
+        $imageDownloader = new \brodovenko\saveimage\src\ImageDownloader($imageUrl);
+        $imageValidator = new \brodovenko\saveimage\src\ImageValidator($params);
 
-        $this->asserTrue($imageValidator->validate());
+        $this->asserTrue($imageValidator->validate($imageDownloader->download()));
     }
 }

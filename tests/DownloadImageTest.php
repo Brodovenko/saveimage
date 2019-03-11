@@ -6,8 +6,9 @@
  * Time: 01:17
  */
 
+use PHPUnit\Framework\TestCase;
 
-class DownloadImageTest extends \PHPUnit_Framework_TestCase
+class DownloadImageTest extends TestCase
 {
 
     public function testRun()
@@ -15,6 +16,6 @@ class DownloadImageTest extends \PHPUnit_Framework_TestCase
 //        $imageUrl = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/2014-09-12_-_Vitali_Klitschko_-_9019.jpg/270px-2014-09-12_-_Vitali_Klitschko_-_9019.jpg';
 //        $app = new ImageDownloader($imageUrl);
 //        $this->assertTrue($app->run());
-        $this->assertObjectHasAttribute('getRaw', new stdClass);
+//        $this->assertObjectHasAttribute('getRaw', new stdClass);
     }
 }
