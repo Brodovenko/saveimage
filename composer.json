@@ -1,0 +1,22 @@
+{
+    "name": "brodovenko/saveimage",
+    "description": "TEST",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Vitalii Brodovenko",
+            "email": "vitalii.brodovenko@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+		"phpunit/phpunit": "6.5"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "brodovenko\\saveimage\\": ""
+        }
+    }
+}
