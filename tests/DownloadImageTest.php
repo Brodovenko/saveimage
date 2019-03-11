@@ -7,7 +7,7 @@
  */
 
 
-class DownloadImageTest extends PHPUnit_Framework_TestCase
+class DownloadImageTest extends \PHPUnit_Framework_TestCase
 {
 
     public function testRun()
