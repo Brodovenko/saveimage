@@ -33,7 +33,7 @@ class ImageSaver
         if (!file_exists($this->pathToSave)) {
             mkdir($this->pathToSave, 0777);
         }
-        if (!file_put_contents($this->pathToSave . '/' . $name . $extension, $raw)) {
+        if (!file_put_contents($this->pathToSave . DIRECTORY_SEPARATOR . $name . $extension, $raw)) {
             throw new InvalidImageException('При сохранении изображения на диск произошла ошибка.');
         }
     }
